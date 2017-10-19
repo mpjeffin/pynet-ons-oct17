@@ -2,13 +2,6 @@
 from __future__ import print_function
 import jinja2
 
-bgp_cisco_template = """
-router bgp 10
-  neighbor {{ peer_ip }} remote-as {{ remote_as }}
-    address-family ipv4 unicast 
-
-"""
-
 bgp_juniper_template = """
 protocols {
     bgp {
