@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 from jnpr.junos import Device
 from jnpr.junos.utils.config import Config
 from getpass import getpass
@@ -14,11 +15,11 @@ a_device.open()
 a_device.timeout = 90
 cfg = Config(a_device)
 
-print "\nConfiguring IP using {} notation (external file)"
+print("\nConfiguring IP using {} notation (external file)")
 cfg.load(path="configure_ip.conf", format="text", merge=False)
 
-print "Current config differences: "
-print cfg.diff()
+print("Current config differences: ")
+print(cfg.diff())
 
-print "Performing commit"
+print("Performing commit")
 cfg.commit()
