@@ -15,7 +15,7 @@ protocols {
 
 For this template create a CSV file consisting of five network devices:
 
-device_name, peer_as, neighbor1, neighbor2, neighbor2
+device_name, peer_as, neighbor1, neighbor2, neighbor3
 rtr1, 22, 10.10.10.99, 10.10.10.8, 10.10.10.254
 ...
 
