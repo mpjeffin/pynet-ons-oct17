@@ -1,0 +1,49 @@
+Create a Python program with the following list:
+
+intf_list = [
+    ('ge-0/0/0', '10.10.10.1/24')
+    ('ge-0/0/1', '10.10.11.1/24')
+    ('ge-0/0/2', '10.10.12.1/24')
+    ('ge-0/0/3', '10.10.13.1/24')
+]
+
+Using a for loop embedded inside a Jinja2 template generate the below
+output configuration. The interface name should come the 'intf_list'. The
+IP address and netmask should also come from the 'intf_list'.
+
+interfaces {
+    ge-0/0/0 {
+        unit 0 {
+            replace:
+            family inet {
+                address 10.10.10.1/24;
+            }
+        }
+    }
+    ge-0/0/1 {
+        unit 0 {
+            replace:
+            family inet {
+                address 10.10.11.1/24;
+            }
+        }
+    }
+    ge-0/0/2 {
+        unit 0 {
+            replace:
+            family inet {
+                address 10.10.12.1/24;
+            }
+        }
+    }
+    ge-0/0/3 {
+        unit 0 {
+            replace:
+            family inet {
+                address 10.10.13.1/24;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,9 @@
+Create a unit test file named test_ex2.py.
+
+In this unit test create a unit test fixture that establishes an SSH
+connection to pynet-rtr2.
+
+Write a unit test that uses this SSH fixture and executes the 'show ip
+int brief' command on the remote device. The unit test should pass if
+the output contains the IP address '10.220.88.21'. Otherwise, the unit
+test should fail.
